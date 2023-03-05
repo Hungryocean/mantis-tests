@@ -39,5 +39,12 @@ namespace mantis_tests
                 return false;
             }
         }
+        public void SelectElement(By locator, string text)
+        {
+            if (text != null)
+            {
+                new SelectElement(driver.FindElement(locator)).SelectByText(text);
+            }
+        }
     }
 }
